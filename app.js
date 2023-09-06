@@ -98,6 +98,7 @@ function moveInvaders() {
     resultsDisplay.innerHTML = 'GAME OVER'
     clearInterval(invadersId)
     deathsnd.play()
+    return
   }
 
   for (let i = 0; i < alienInvaders.length; i++) {
@@ -105,6 +106,7 @@ function moveInvaders() {
       resultsDisplay.innerHTML = 'GAME OVER'
       clearInterval(invadersId)
       deathsnd.play()
+      return
     }
   }
   if (aliensRemoved.length === alienInvaders.length) {
