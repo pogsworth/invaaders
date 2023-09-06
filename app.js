@@ -18,6 +18,7 @@ booms.push(boom1, boom2, boom3, boom4);
 let shootsnd = new Audio("snd/shoot.mp3")
 let killsnd = new Audio("snd/kill.mp3")
 let deathsnd = new Audio("snd/death.mp3")
+let victory = new Audio("snd/you-win.mp3")
 let invadersSpeed = 600
 
 for (let i = 0; i < 225; i++) {
@@ -109,6 +110,7 @@ function moveInvaders() {
   if (aliensRemoved.length === alienInvaders.length) {
     resultsDisplay.innerHTML = 'YOU WIN'
     clearInterval(invadersId)
+    victory.play()
   }
 
   booms[boom_idx].play();
