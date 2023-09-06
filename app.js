@@ -111,6 +111,7 @@ function moveInvaders() {
     resultsDisplay.innerHTML = 'YOU WIN'
     clearInterval(invadersId)
     victory.play()
+    return
   }
 
   booms[boom_idx].play();
