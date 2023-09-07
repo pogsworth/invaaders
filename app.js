@@ -20,6 +20,7 @@ let killsnd = new Audio("snd/kill.mp3")
 let deathsnd = new Audio("snd/death.mp3")
 let victory = new Audio("snd/you-win.mp3")
 let invadersSpeed = 600
+let max_missiles = 3
 
 for (let i = 0; i < 225; i++) {
   const square = document.createElement('div')
@@ -167,8 +168,9 @@ function shoot(e) {
     }
   }
   switch(e.key) {
+    case ' ':
     case 'ArrowUp':
-        if (missile_count > 2)
+        if (missile_count >= max_missiles)
             return;
         missile_count++;
         laserId = setInterval(moveLaser, 100)
