@@ -20,8 +20,8 @@ let killsnd = new Audio("snd/kill.mp3")
 let deathsnd = new Audio("snd/death.mp3")
 let victory = new Audio("snd/you-win.mp3")
 let invadersSpeed = 600
-let max_missiles = 3
-
+let max_missiles = 5
+      
 for (let i = 0; i < 225; i++) {
   const square = document.createElement('div')
   grid.appendChild(square)
@@ -122,7 +122,7 @@ function moveInvaders() {
   if (boom_idx > 3)
     boom_idx = 0;
 
-  newSpeed = 200 + 100 * Math.floor((alienInvaders.length - aliensRemoved.length) / 6);
+  newSpeed = 400 + 100 * Math.floor((alienInvaders.length - aliensRemoved.length) / 6);
 
   if (newSpeed != invadersSpeed)
   {
@@ -138,7 +138,7 @@ function shoot(e) {
   let laserId
   let currentLaserIndex = currentShooterIndex
   function moveLaser() {
-    squares[currentLaserIndex].classList.remove('laser')
+    squares[currentLaserIndex].classList.remove('laser')                   
     currentLaserIndex -= width
     if (currentLaserIndex < 0)
     {
@@ -174,7 +174,7 @@ function shoot(e) {
             return;
         missile_count++;
         laserId = setInterval(moveLaser, 100)
-        shootsnd.play()
+        deathsnd.play()
   }
 }
 

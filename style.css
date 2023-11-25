@@ -12,7 +12,7 @@
 }
 
 .invader {
-    background-image: url('img/invader.png');
+    background-image: url('img/kimball.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 40px 40px;
@@ -26,9 +26,10 @@
 }
 
 .laser {
-	background-image: url('img/laser.png');
+	background-image: url('img/shoe.png');
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 20px 40px;
 }
 
 .boom {
@@ -36,4 +37,4 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 40px 40px;
-}
+}  
